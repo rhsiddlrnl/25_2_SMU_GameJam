@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3712673143794365314}
   - component: {fileID: 4970420667837727270}
   - component: {fileID: 4777571207700735678}
-  - component: {fileID: 8585440253402429254}
   - component: {fileID: 2910452628047089489}
   - component: {fileID: -1397461421990042671}
   m_Layer: 0
@@ -158,18 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b0221a62cec864ebac3288a132adfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MisileCollision
---- !u!114 &8585440253402429254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3347178860951271679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1493fe7370785bd46bc873fc76e7537f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MisileSpriteFacetoPlayer
 --- !u!114 &2910452628047089489
 MonoBehaviour:
   m_ObjectHideFlags: 0
