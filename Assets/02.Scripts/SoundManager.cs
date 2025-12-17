@@ -5,11 +5,11 @@ public class SoundManager : MonoBehaviour
     // 싱글톤 패턴: 어디서든 SoundManager.instance 로 부를 수 있게 함
     public static SoundManager instance;
 
-    [Header("스피커 설정")]
+    [Header("speaker")]
     public AudioSource bgmPlayer; // 배경음악용 스피커 (반복 재생)
     public AudioSource sfxPlayer; // 효과음용 스피커 (한 번 재생)
 
-    [Header("오디오 클립 모음")]
+    [Header("audio clip collection")]
     public AudioClip mainBgm;   // 배경음악 파일
     public AudioClip attackSfx; // 미사일 발사 소리
     public AudioClip hitSfx;    // 피격 소리
