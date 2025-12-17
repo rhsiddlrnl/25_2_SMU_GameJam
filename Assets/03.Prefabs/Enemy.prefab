@@ -189,4 +189,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCollision
   itemPrefab: {fileID: 6139003172609833519, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-  dropchance: 30
+  dropchance: 20

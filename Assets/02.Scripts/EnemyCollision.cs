@@ -12,6 +12,8 @@ public class EnemyCollision : MonoBehaviour
     public GameObject itemPrefab;
     [Range(0, 100)] public float dropchance = 30f;
 
+    private bool isDead = false;
+
     void Start()
     {
         hpController = GameObject.Find("HPManager")?.GetComponent<HPControll>();
@@ -23,6 +25,8 @@ public class EnemyCollision : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isDead) return;
+
         if (collision.CompareTag("Bubble"))
         {
             enemyHp--;
@@ -32,6 +36,8 @@ public class EnemyCollision : MonoBehaviour
 
             if (enemyHp < 1)
             {
+                isDead = true;
+
                 DropItem();
                 // �״� ���� �ٷ� Destroy�ϸ� ������� ���̱� ���� ����� �� �־��.
                 Destroy(gameObject, 0.15f);
