@@ -738,9 +738,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MisileSpawner
   missilePrefab: {fileID: 1024224136614913324, guid: a80bfe05d4b550a469a0b1854c3e6587, type: 3}
-  spawnInterval: 0.5
-  spawnRadius: 10
-  spriteRotationOffset: 0
+  spawnInterval: 2
+  difficultyDelay: 15
+  intervalDecreaseRate: 0.025
 --- !u!4 &727870978
 Transform:
   m_ObjectHideFlags: 0
@@ -1073,9 +1073,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MisileSpawner
   missilePrefab: {fileID: 3347178860951271679, guid: 9e323c8451f4cd344ba2e9aad0f36df0, type: 3}
-  spawnInterval: 0.5
-  spawnRadius: 10
-  spriteRotationOffset: 0
+  spawnInterval: 1
+  difficultyDelay: 15
+  intervalDecreaseRate: 0.015
 --- !u!4 &1299630102
 Transform:
   m_ObjectHideFlags: 0
