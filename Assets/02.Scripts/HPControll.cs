@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class HPControll : MonoBehaviour
 {
     [SerializeField]
@@ -24,6 +25,7 @@ public class HPControll : MonoBehaviour
         if (HP <= 0)
         {
             Debug.Log("Fail");
+            GameManager.instance.OnPlayerDead();
         }
     }
 }

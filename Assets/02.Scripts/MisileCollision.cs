@@ -4,20 +4,38 @@ public class MisileCollision : MonoBehaviour
 {
     HPControll hpController;
 
-    private void Start()
+    [SerializeField] GameObject Shield;
+    [SerializeField] float shieldLifeTime = 0.15f;   // �� �� �� ����
+    [SerializeField] float shieldAngleOffset = 0f;
+
+    void Start()
     {
-        hpController = GameObject.Find("HPManager").GetComponent<HPControll>();
+        hpController = GameObject.Find("HPManager")?.GetComponent<HPControll>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Shell"))
+        if (collision.CompareTag("Shell"))
         {
+            SoundManager.instance.PlayShieldSound();
+            // ���� ��ġ: ��� ������Ʈ ��ġ or �浹 ������ ������
+            Vector3 spawnPos = collision.ClosestPoint(transform.position);
+
+            // ���� ȸ��: �̻��� ���� �״��(+������)
+            Quaternion spawnRot = Quaternion.Euler(0f, 0f, transform.eulerAngles.z + shieldAngleOffset);
+
+            GameObject shieldObj = Instantiate(Shield, spawnPos, spawnRot);
+            Destroy(shieldObj, shieldLifeTime);
+
             Destroy(gameObject);
         }
-        else if (collision.gameObject.CompareTag("Body"))
+        else if (collision.CompareTag("Body"))
         {
-            hpController.TakeDamage(1);
+            SoundManager.instance.PlayHitSound();
+
+            if (hpController != null)
+                hpController.TakeDamage(1);
+
             Destroy(gameObject);
         }
     }
