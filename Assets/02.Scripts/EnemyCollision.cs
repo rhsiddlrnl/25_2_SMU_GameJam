@@ -14,7 +14,7 @@ public class EnemyCollision : MonoBehaviour
         hpController = GameObject.Find("HPManager")?.GetComponent<HPControll>();
         srs = GetComponentsInChildren<SpriteRenderer>(true);
 
-        // µð¹ö±×: ½ºÇÁ¶óÀÌÆ®¸¦ ¸ø Ã£´Â °æ¿ì ¹Ù·Î È®ÀÎ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ù·ï¿½ È®ï¿½ï¿½
         // Debug.Log($"SpriteRenderers found: {srs.Length}", this);
     }
 
@@ -29,7 +29,8 @@ public class EnemyCollision : MonoBehaviour
 
             if (enemyHp < 1)
             {
-                // Á×´Â ¼ø°£ ¹Ù·Î DestroyÇÏ¸é ±ôºýÀÓÀÌ º¸ÀÌ±â Àü¿¡ »ç¶óÁú ¼ö ÀÖ¾î¿ä.
+
+                // ï¿½×´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù·ï¿½ Destroyï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½.
                 Destroy(gameObject, 0.15f);
             }
         }
