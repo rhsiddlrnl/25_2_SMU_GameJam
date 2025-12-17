@@ -12,6 +12,7 @@ TagManager:
   - Item
   - Tentacle
   - Bullets
+  - Timer
   layers:
   - Default
   - TransparentFX
