@@ -13,13 +13,8 @@ public class ItemCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Body"))
+        if (collision.gameObject.CompareTag("Body")|| collision.gameObject.CompareTag("Shell"))
         {   
-            hpManager.TakeHeal(1);
-            Destroy(gameObject);
-        }
-        else if (collision.gameObject.CompareTag("Shell"))
-        {
             hpManager.TakeHeal(1);
             Destroy(gameObject);
         }
