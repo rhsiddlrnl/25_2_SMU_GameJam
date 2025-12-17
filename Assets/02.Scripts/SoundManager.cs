@@ -40,7 +40,7 @@ public class SoundManager : MonoBehaviour
     {
         bgmPlayer.clip = clip;
         bgmPlayer.loop = true; // 무한 반복
-        bgmPlayer.volume = 0.5f; // 볼륨 조절 (0.0 ~ 1.0)
+        bgmPlayer.volume = 0.3f; // 볼륨 조절 (0.0 ~ 1.0)
         bgmPlayer.Play();
     }
 
