@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine;
+
 
 public class SkillManager : MonoBehaviour
 {
@@ -86,22 +86,22 @@ public class SkillManager : MonoBehaviour
         if (whiteFogPanel != null) whiteFogPanel.SetActive(false);
         if (subtitleImageObj != null) subtitleImageObj.SetActive(false);
 
-        Time.timeScale = defaultTimeScale; // 시간 정상화
+        Time.timeScale = defaultTimeScale; 
         isSkillActive = false;
     }
 
-    // 패널을 무한히 깜빡이게 하는 코루틴
+    
     IEnumerator BlinkPanelEffect()
     {
         if (whiteFogPanel == null) yield break;
 
         bool isVisible = true;
-        while (true) // 멈추라고 할 때까지 무한 반복
+        while (true) 
         {
             whiteFogPanel.SetActive(isVisible);
-            isVisible = !isVisible; // 켜짐<->꺼짐 상태 반전
+            isVisible = !isVisible; 
 
-            // Realtime을 써서 시간이 멈춰도 정해진 속도로 깜빡임
+            
             yield return new WaitForSecondsRealtime(blinkInterval);
         }
     }
