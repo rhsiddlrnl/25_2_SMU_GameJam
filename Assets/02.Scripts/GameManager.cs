@@ -19,10 +19,10 @@ public class GameManager : MonoBehaviour
         
         if (!isGameOver)
         {
-            survivalTime += Time.deltaTime; 
+            survivalTime += Time.deltaTime * 10; 
 
             
-            timeText.text = "Time: " + (int)survivalTime;
+            timeText.text = "Score: " + (int)survivalTime;
         }
     }
 
