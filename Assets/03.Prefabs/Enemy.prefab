@@ -188,5 +188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b75a2dbd016ed947b2ed89ef5931e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCollision
-  itemPrefab: {fileID: 6139003172609833519, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-  dropchance: 20
+  lootTable:
+  - name: Health
+    itemPrefab: {fileID: 6139003172609833519, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
+    dropChance: 20
+  - name: Timer
+    itemPrefab: {fileID: 1955690500702666082, guid: 557e54ad3f111534e871c19a16aa873c, type: 3}
+    dropChance: 5
