@@ -2,11 +2,8 @@ using UnityEngine;
 
 public class BubbleCollision : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnBecameInvisible()
     {
-        if (collision.gameObject.CompareTag("Bound"))
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }

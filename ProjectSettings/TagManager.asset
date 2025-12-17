@@ -8,6 +8,7 @@ TagManager:
   - Body
   - Bubble
   - Bound
+  - Enemy
   layers:
   - Default
   - TransparentFX
