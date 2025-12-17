@@ -4,15 +4,16 @@ using UnityEngine.InputSystem.XR;
 public class TentacleCollision : MonoBehaviour
 {
     private GameObject player;
-
+    private HPControll hpManager;
     private TentacleMove tentacleMove;
 
     [SerializeField]
     bool touched = false;
-
+    
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
+        hpManager = GameObject.Find("HPManager").GetComponent<HPControll>();
         tentacleMove = GetComponent<TentacleMove>();
     }
     
@@ -41,12 +42,19 @@ public class TentacleCollision : MonoBehaviour
             tentacleMove.SetDirection(direction);
             touched = true;
         }
-        else if (collision.gameObject.CompareTag("Body") && touched)
+        else if ((collision.gameObject.CompareTag("Body") || collision.gameObject.CompareTag("Shell")) && touched)
         {
-            Destroy(gameObject);
-        }
-        else if (collision.gameObject.CompareTag("Shell") && touched)
-        {
+            // 자식 중 Item 태그를 가진 오브젝트가 있으면 HP 회복
+            foreach (Transform child in transform)
+            {
+                if (child.CompareTag("Item"))
+                {
+                    Debug.Log("Heal");
+                    if (hpManager != null)
+                        hpManager.TakeHeal(1);
+                    Destroy(child.gameObject);
+                }
+            }
             Destroy(gameObject);
         }
     }

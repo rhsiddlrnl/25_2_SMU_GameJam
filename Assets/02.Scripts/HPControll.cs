@@ -28,4 +28,12 @@ public class HPControll : MonoBehaviour
             GameManager.instance.OnPlayerDead();
         }
     }
+
+    public void TakeHeal(int heal)
+    {
+        Debug.Log("Heal");
+        HP += heal;
+        hpBarcontroller.ClearHPBar();
+        hpBarcontroller.SetHPBar(HP);
+    }
 }
