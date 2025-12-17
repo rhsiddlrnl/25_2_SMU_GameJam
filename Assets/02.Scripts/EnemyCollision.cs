@@ -9,17 +9,24 @@ public class EnemyCollision : MonoBehaviour
     SpriteRenderer[] srs;
     Coroutine blinkCo;
 
+    public GameObject itemPrefab;
+    [Range(0, 100)] public float dropchance = 30f;
+
+    private bool isDead = false;
+
     void Start()
     {
         hpController = GameObject.Find("HPManager")?.GetComponent<HPControll>();
         srs = GetComponentsInChildren<SpriteRenderer>(true);
 
-        // µð¹ö±×: ½ºÇÁ¶óÀÌÆ®¸¦ ¸ø Ã£´Â °æ¿ì ¹Ù·Î È®ÀÎ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ù·ï¿½ È®ï¿½ï¿½
         // Debug.Log($"SpriteRenderers found: {srs.Length}", this);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isDead) return;
+
         if (collision.CompareTag("Bubble"))
         {
             enemyHp--;
@@ -29,7 +36,10 @@ public class EnemyCollision : MonoBehaviour
 
             if (enemyHp < 1)
             {
-                // Á×´Â ¼ø°£ ¹Ù·Î DestroyÇÏ¸é ±ôºýÀÓÀÌ º¸ÀÌ±â Àü¿¡ »ç¶óÁú ¼ö ÀÖ¾î¿ä.
+                isDead = true;
+
+                DropItem();
+                // ï¿½×´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù·ï¿½ Destroyï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½.
                 Destroy(gameObject, 0.15f);
             }
         }
@@ -63,6 +73,18 @@ public class EnemyCollision : MonoBehaviour
         for (int i = 0; i < srs.Length; i++)
         {
             if (srs[i] != null) srs[i].enabled = on;
+        }
+    }
+
+    void DropItem()
+    {
+        if(itemPrefab== null) return;
+
+        float randomValue = Random.Range(0f, 100f);
+
+        if(randomValue <= dropchance)
+        {
+            Instantiate(itemPrefab, transform.position, Quaternion.identity);
         }
     }
 }

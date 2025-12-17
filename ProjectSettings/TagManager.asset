@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Item
   - Tentacle
+  - Bullets
   layers:
   - Default
   - TransparentFX
