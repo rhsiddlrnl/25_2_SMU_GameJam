@@ -61,12 +61,7 @@ public class Spawner : MonoBehaviour
 
         //플레이어 방향 계산 (타겟 - 생성위치)
         Vector3 direction = target.position - spawnPosition;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        //회전값 생성 (계산된 각도 + 그림 보정값)
-        Quaternion rotation = Quaternion.Euler(0, 0, angle + spriteRotationOffset);
-
         //생성 
-        Instantiate(missilePrefab, spawnPosition, rotation);
+        Instantiate(missilePrefab, spawnPosition, Quaternion.identity);
     }
 }
