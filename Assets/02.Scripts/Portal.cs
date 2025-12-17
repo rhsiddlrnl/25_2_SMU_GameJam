@@ -38,6 +38,7 @@ public class SkillManager : MonoBehaviour
         {
             timerItemController.ChangeTimerItemCount(-1);
             StartCoroutine(ProcessSkillSequence());
+            SoundManager.instance.PlayWeakwordSound();
         }
     }
 

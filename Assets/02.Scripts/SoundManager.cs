@@ -14,7 +14,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip attackSfx; // 미사일 발사 소리
     public AudioClip hitSfx;    // 피격 소리
     public AudioClip shieldSfx; //방어막 소리
-
+    public AudioClip weakwordSfx;
     void Awake()
     {
         // 게임 시작 시 나 자신을 instance에 넣음
@@ -58,5 +58,8 @@ public class SoundManager : MonoBehaviour
     public void PlayShieldSound()
     {
         sfxPlayer.PlayOneShot(shieldSfx);
+    }
+    public void PlayWeakwordSound() { 
+        sfxPlayer.PlayOneShot(weakwordSfx);
     }
 }

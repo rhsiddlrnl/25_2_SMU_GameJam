@@ -1068,6 +1068,7 @@ MonoBehaviour:
   attackSfx: {fileID: 8300000, guid: 8943e0dbf28d2e649bfb10baeb646db3, type: 3}
   hitSfx: {fileID: 8300000, guid: 57b17028c612ac0408fdec60377318c5, type: 3}
   shieldSfx: {fileID: 8300000, guid: b0ef8e167c187f44d965dcc384f8168f, type: 3}
+  weakwordSfx: {fileID: 8300000, guid: 05f096cb25a541c49aa811cf16cdacb8, type: 3}
 --- !u!4 &576564587
 Transform:
   m_ObjectHideFlags: 0
