@@ -8,7 +8,7 @@ public class SkillManager : MonoBehaviour
     public GameObject portalObj;
     public GameObject parallelObj;
 
-    [Header("UI ¿¬Ãâ")]
+    [Header("UI ï¿½ï¿½ï¿½ï¿½")]
     public GameObject whiteFogPanel; 
     public GameObject subtitleImageObj;
 
@@ -18,7 +18,7 @@ public class SkillManager : MonoBehaviour
     public float arriveDelay = 0.5f;
     public float endDelay = 2.0f;
 
-    [Header("Blink Settings")] //ÀÌÂÊÀÌ Á¡¸ê ¼Óµµ
+    [Header("Blink Settings")] //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½
     public float blinkInterval = 0.1f; 
 
     private bool isSkillActive = false;
