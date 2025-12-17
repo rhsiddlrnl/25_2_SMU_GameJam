@@ -25,6 +25,8 @@ public class ShotBubble : MonoBehaviour
             {
                 bubbleMove.SetDirection(direction);
             }
+
+            SoundManager.instance.PlayAttackSound();
         }
     }
 }
