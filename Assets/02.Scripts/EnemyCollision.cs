@@ -9,6 +9,9 @@ public class EnemyCollision : MonoBehaviour
     SpriteRenderer[] srs;
     Coroutine blinkCo;
 
+    public GameObject itemPrefab;
+    [Range(0, 100)] public float dropchance = 30f;
+
     void Start()
     {
         hpController = GameObject.Find("HPManager")?.GetComponent<HPControll>();
@@ -29,7 +32,7 @@ public class EnemyCollision : MonoBehaviour
 
             if (enemyHp < 1)
             {
-
+                DropItem();
                 // �״� ���� �ٷ� Destroy�ϸ� ������� ���̱� ���� ����� �� �־��.
                 Destroy(gameObject, 0.15f);
             }
@@ -64,6 +67,18 @@ public class EnemyCollision : MonoBehaviour
         for (int i = 0; i < srs.Length; i++)
         {
             if (srs[i] != null) srs[i].enabled = on;
+        }
+    }
+
+    void DropItem()
+    {
+        if(itemPrefab== null) return;
+
+        float randomValue = Random.Range(0f, 100f);
+
+        if(randomValue <= dropchance)
+        {
+            Instantiate(itemPrefab, transform.position, Quaternion.identity);
         }
     }
 }
