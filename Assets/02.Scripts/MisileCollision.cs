@@ -5,7 +5,7 @@ public class MisileCollision : MonoBehaviour
     HPControll hpController;
 
     [SerializeField] GameObject Shield;
-    [SerializeField] float shieldLifeTime = 0.15f;   // ¸î ÃÊ ÈÄ µð½ºÆù
+    [SerializeField] float shieldLifeTime = 0.15f;   // ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     [SerializeField] float shieldAngleOffset = 0f;
 
     void Start()
@@ -17,10 +17,11 @@ public class MisileCollision : MonoBehaviour
     {
         if (collision.CompareTag("Shell"))
         {
-            // ½ºÆù À§Ä¡: »ó´ë ¿ÀºêÁ§Æ® À§Ä¡ or Ãæµ¹ ÁöÁ¡¿¡ °¡±õ°Ô
+            SoundManager.instance.PlayShieldSound();
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡: ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½Ä¡ or ï¿½æµ¹ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Vector3 spawnPos = collision.ClosestPoint(transform.position);
 
-            // ½ºÆù È¸Àü: ¹Ì»çÀÏ °¢µµ ±×´ë·Î(+¿ÀÇÁ¼Â)
+            // ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½: ï¿½Ì»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×´ï¿½ï¿½(+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
             Quaternion spawnRot = Quaternion.Euler(0f, 0f, transform.eulerAngles.z + shieldAngleOffset);
 
             GameObject shieldObj = Instantiate(Shield, spawnPos, spawnRot);
@@ -30,6 +31,8 @@ public class MisileCollision : MonoBehaviour
         }
         else if (collision.CompareTag("Body"))
         {
+            SoundManager.instance.PlayHitSound();
+
             if (hpController != null)
                 hpController.TakeDamage(1);
 
