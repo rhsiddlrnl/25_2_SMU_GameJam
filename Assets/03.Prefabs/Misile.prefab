@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 3712673143794365314}
   - component: {fileID: 4970420667837727270}
   - component: {fileID: 4777571207700735678}
+  - component: {fileID: 8585440253402429254}
   - component: {fileID: 2910452628047089489}
+  - component: {fileID: -1397461421990042671}
   m_Layer: 0
   m_Name: Misile
   m_TagString: Untagged
@@ -82,9 +84,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d79ef79b5a264cfd9b4195c5a9760d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,8 +133,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.15, y: 2.4}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -156,6 +158,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b0221a62cec864ebac3288a132adfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MisileCollision
+--- !u!114 &8585440253402429254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3347178860951271679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1493fe7370785bd46bc873fc76e7537f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MisileSpriteFacetoPlayer
 --- !u!114 &2910452628047089489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +182,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ae333ad99051e4799293058f545b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MisileMove
+  speedf: 1
+--- !u!95 &-1397461421990042671
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3347178860951271679}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bfa1f197800da41f29dee560ee391cae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
