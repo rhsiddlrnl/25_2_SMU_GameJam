@@ -25,7 +25,7 @@ public class HPControll : MonoBehaviour
         if (HP <= 0)
         {
             Debug.Log("Fail");
-            SceneManager.LoadScene("End");
+            GameManager.instance.OnPlayerDead();
         }
     }
 }
