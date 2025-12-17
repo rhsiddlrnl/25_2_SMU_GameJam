@@ -19,7 +19,10 @@ public class SkillManager : MonoBehaviour
     public float endDelay = 2.0f;
 
     [Header("Blink Settings")] //������ ���� �ӵ�
-    public float blinkInterval = 0.1f; 
+    public float blinkInterval = 0.1f;
+
+    [SerializeField]
+    private TimerItemControll timerItemController;
 
     private bool isSkillActive = false;
     private float defaultTimeScale;
@@ -31,8 +34,9 @@ public class SkillManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K) && !isSkillActive)
+        if (Input.GetKeyDown(KeyCode.K) && !isSkillActive && (timerItemController.GetTimerCount() >= 1))
         {
+            timerItemController.ChangeTimerItemCount(-1);
             StartCoroutine(ProcessSkillSequence());
         }
     }
