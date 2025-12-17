@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [Header("UI ¿¬°á")]
+    [Header("UI")]
     public TextMeshProUGUI timeText;   
     public TextMeshProUGUI bestScoreText;  
 
