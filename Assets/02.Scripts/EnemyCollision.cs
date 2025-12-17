@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyCollision : MonoBehaviour
@@ -9,8 +10,15 @@ public class EnemyCollision : MonoBehaviour
     SpriteRenderer[] srs;
     Coroutine blinkCo;
 
-    public GameObject itemPrefab;
-    [Range(0, 100)] public float dropchance = 30f;
+    [System.Serializable]
+    public class Loot
+    {
+        public string name;           // 아이템 이름 (헷갈리지 않게 메모용)
+        public GameObject itemPrefab; // 아이템 프리팹
+        [Range(0, 100)] public float dropChance; // 확률
+    }
+
+    public List<Loot> lootTable = new List<Loot>();
 
     private bool isDead = false;
 
@@ -78,13 +86,19 @@ public class EnemyCollision : MonoBehaviour
 
     void DropItem()
     {
-        if(itemPrefab== null) return;
-
-        float randomValue = Random.Range(0f, 100f);
-
-        if(randomValue <= dropchance)
+        foreach (Loot loot in lootTable)
         {
-            Instantiate(itemPrefab, transform.position, Quaternion.identity);
+            // 아이템이 없으면 패스
+            if (loot.itemPrefab == null) continue;
+
+            // 주사위 굴리기 (0 ~ 100)
+            float randomValue = Random.Range(0f, 100f);
+
+            // 확률 당첨되면 생성
+            if (randomValue <= loot.dropChance)
+            {
+                Instantiate(loot.itemPrefab, transform.position, Quaternion.identity);
+            }
         }
     }
 }

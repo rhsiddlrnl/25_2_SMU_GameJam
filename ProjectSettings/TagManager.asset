@@ -12,6 +12,7 @@ TagManager:
   - Item
   - Tentacle
   - Bullets
+  - Timer
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - UI
   - Tentacle
   - Player
-  - 
+  - Bound
   - 
   - 
   - 
