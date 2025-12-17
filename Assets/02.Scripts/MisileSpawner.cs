@@ -35,14 +35,6 @@ public class MisileSpawner : MonoBehaviour
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
         Vector3 spawnPosition = target.position + (Vector3)(randomDirection * spawnRadius);
 
-        // 2. 플레이어 방향 계산 (타겟 - 생성위치)
-        Vector3 direction = target.position - spawnPosition;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        // 3. 회전값 생성 (계산된 각도 + 그림 보정값)
-        Quaternion rotation = Quaternion.Euler(0, 0, angle + spriteRotationOffset);
-
-        // 4. 생성 (위치와 회전을 동시에 적용!)
-        Instantiate(missilePrefab, spawnPosition, rotation);
+        Instantiate(missilePrefab, spawnPosition, Quaternion.identity);
     }
 }
