@@ -2215,67 +2215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShotTentacle
   tentaclePrefab: {fileID: 4416456333693739783, guid: 5aac3f2e374121843b313ebb28ec127b, type: 3}
---- !u!1001 &1886603222528396614
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3717556777175398548, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-      propertyPath: hpManager
-      value: 
-      objectReference: {fileID: 1975999926}
-    - target: {fileID: 6139003172609833519, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-      propertyPath: m_Name
-      value: Item
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960602358602745134, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960602358602745134, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960602358602745134, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960602358602745134, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960602358602745134, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960602358602745134, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960602358602745134, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960602358602745134, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960602358602745134, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960602358602745134, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 30a4055c6cec56a439710000e97e44fc, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2294,4 +2233,16 @@ SceneRoots:
   - {fileID: 727870978}
   - {fileID: 1178850277}
   - {fileID: 576564587}
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 1886603222528396614}
+=======
+  - {fileID: 578052910}
+>>>>>>> Stashed changes
+=======
+  - {fileID: 578052910}
+>>>>>>> Stashed changes
+=======
+  - {fileID: 578052910}
+>>>>>>> Stashed changes
