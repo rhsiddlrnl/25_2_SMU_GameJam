@@ -157,6 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b0221a62cec864ebac3288a132adfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MisileCollision
+  Shield: {fileID: 1363205059362323072, guid: d0f41414d6887f34f99a077e902b32f1, type: 3}
+  shieldLifeTime: 0.15
+  shieldAngleOffset: 0
 --- !u!114 &2910452628047089489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ae333ad99051e4799293058f545b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MisileMove
-  speedf: 1
+  speedf: 2
 --- !u!95 &-1397461421990042671
 Animator:
   serializedVersion: 7
