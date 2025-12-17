@@ -22,7 +22,7 @@ public class HPBarControll : MonoBehaviour
             rt.anchoredPosition = heartPos;
 
             // 다음 하트 위치 조정 (예: 30픽셀씩 오른쪽으로 이동)
-            heartPos.x += 30f;
+            heartPos.x += 50f;
         }
     }
     

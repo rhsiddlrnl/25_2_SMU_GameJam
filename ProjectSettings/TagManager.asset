@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Shell
   - Body
+  - Bubble
+  - Bound
   layers:
   - Default
   - TransparentFX
