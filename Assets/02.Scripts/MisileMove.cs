@@ -18,5 +18,9 @@ public class MisileMove : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, angle - 90);
             transform.position += direction * Time.deltaTime * speedf;
         }
+        else
+        {
+            return;
+        }
     }
 }

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Shell
   - Body
+  - Bubble
+  - Bound
+  - Enemy
   layers:
   - Default
   - TransparentFX
