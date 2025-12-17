@@ -7,7 +7,7 @@ public class ShotTentacle : MonoBehaviour
 
     private void Update()
     {
-        if (Mouse.current.rightButton.wasPressedThisFrame)
+        if (Mouse.current.rightButton.wasPressedThisFrame && GameObject.FindWithTag("Tentacle") == null)
         {
             Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
             Vector3 screenPos = new Vector3(mouseScreenPos.x, mouseScreenPos.y, Mathf.Abs(Camera.main.transform.position.z - transform.position.z));
