@@ -12,8 +12,6 @@ public class Spawner : MonoBehaviour
     public float intervalDecreaseRate = 0.05f; // 1초당 줄어들 간격
     private float minSpawnInterval = 0.1f;      // 최소 간격 제한
 
-    //회전 변수
-    private float spriteRotationOffset = 0f;
 
     private Transform target;
     private float timer = 0f; // 미사일 생성 타이머

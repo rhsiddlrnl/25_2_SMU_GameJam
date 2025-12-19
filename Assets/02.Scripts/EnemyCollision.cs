@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyCollision : MonoBehaviour
 {
     HPControll hpController;
-    int enemyHp = 3;
+    int enemyHp = 2;
 
     SpriteRenderer[] srs;
     Coroutine blinkCo;
