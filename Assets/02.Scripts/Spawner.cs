@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     //난이도 조절
     public float difficultyDelay = 10f;    // 몇 초 뒤부터 어려워질지 설정 
     public float intervalDecreaseRate = 0.05f; // 1초당 줄어들 간격
-    private float minSpawnInterval = 0.1f;      // 최소 간격 제한
+    private float minSpawnInterval = 0.5f;      // 최소 간격 제한
 
 
     private Transform target;
